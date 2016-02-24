@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        
+        <title>Análise</title>
+        
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                margin-top: 50px;
+                font-family: "Open Sans";
+            }
+            
+            #cadeira {
+                width: 200px;
+                margin: 20px;
+            }
+            
+            #loading {
+                width: 40px;
+            }
+            
+            button {
+                background: #CB3837;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                margin: 10px;
+                font-size: 14pt;
+            }
+            
+            #status {
+                margin: 10px;
+                font-size: 16pt;
+                display: none;
+            }
+            
+            #result {
+                margin: 20px;
+                font-size: 30pt;
+                font-weight: bold;
+                color: #34A853;
+                display: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <center>
+            <img id="cadeira" src="http://www.casaevideo.com.br/wcsstore/ExtendedSitesCatalogAssetStore/JPG1000/lazer/0178420.jpg" /><br/>
+            <br/>
+            
+            <button>Analisar</button><br/>
+            
+            <div id="status">
+                Analisando esta cadeira...<br/><br/>
+                <img id="loading" src="http://www.mytreedb.com/uploads/mytreedb/loader/ajax_loader_blue_512.gif" />
+            </div>
+            
+            <div id="result">
+                Ela é de praia.
+            </div>
+        
+        </center>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $("button").click(function() {
+                    $("#status").show();
+                    
+                    setTimeout(function() {
+                        $("#loading").hide();
+                        $("#result").show();
+                    }, 2000);
+                });
+            });
+        </script>
+    </body>
+</html>
