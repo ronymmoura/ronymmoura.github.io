@@ -2,7 +2,7 @@
 
 - [x] Base app
 - [x] Build & deploy
-- [ ] Add MDX
+- [x] Add MDX
 - [ ] Create pages
   - [ ] Home
   - [ ] About
