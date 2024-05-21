@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "../globals.css";
 import { cn } from "@/util";
-import { languages } from "./i18n/settings";
-import "./globals.css";
+import { dir } from "i18next";
+import { languages } from "../i18n/settings";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,7 @@ export default function RootLayout({
   params: any
 }>) {
   return (
-    <html lang={lng} className="dark">
+    <html lang={lng} dir={dir(lng)} className="dark">
       <body className={cn(inter.className, "bg-white dark:bg-slate-700 transition-colors")}>{children}</body>
     </html>
   );

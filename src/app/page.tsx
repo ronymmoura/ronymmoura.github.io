@@ -1,19 +1,11 @@
 "use client";
 
-import { useTheme } from "@/stores";
+import { useRouter } from "next/navigation";
 
-export default function Home() {
-  const { isDark, setIsDark } = useTheme();
+export default function Page() {
+  const router = useRouter();
 
-  return (
-    <main className="">
-      <div className="text-accent font-black text-6xl">
-        Rony Moura
-      </div>
+  router.push("/en");
 
-      <button onClick={() => setIsDark(!isDark)}>
-        Change theme
-      </button>
-    </main>
-  );
+  return (<div></div>);
 }
