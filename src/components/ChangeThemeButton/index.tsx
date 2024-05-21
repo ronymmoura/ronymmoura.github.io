@@ -1,17 +1,18 @@
 "use client";
 
+import { useTheme } from "@/stores/useTheme";
+
 export function ChangeThemeButton() {
 
-  function changeTheme() {
-    const htmlElement = document.querySelector("html");
+  const { isDark, toggleIsDark } = useTheme();
 
-    htmlElement?.hasAttribute("class") 
-      ? htmlElement?.removeAttribute("class")
-      : htmlElement?.setAttribute("class", "dark");
+  function changeTheme() {
+    toggleIsDark();
   }
+
   return (
     <button onClick={changeTheme} className="bg-accent text-white font-bold px-4 py-2">
-      Change theme
+      Change theme {isDark.toString()}
     </button>
   )
 }
