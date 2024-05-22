@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import { languages } from "../i18n/settings";
-import { Html } from "./html";
+import { dir } from "i18next";
+import { Inter } from "next/font/google";
+import { cn } from "@/util";
+import Theme from "../theme-toggle";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rony Moura",
@@ -22,6 +27,12 @@ export default function RootLayout({
   params: any
 }>) {
   return (
-    <Html lng={lng}>{children}</Html>
+    <html lang={lng} dir={dir(lng)}>
+      <body className={cn(inter.className, "bg-white dark:bg-slate-700 transition-colors")}>
+        <Theme>
+          {children}
+        </Theme>
+      </body>
+    </html>
   );
 }
