@@ -14,6 +14,6 @@ export function Logo() {
   }, [theme]);
 
   return (
-    <Image unoptimized src={require(isDark ? "../../assets/logo-negative.svg" : "../../assets/logo.svg")} alt="Logo" />
+    <Image unoptimized src={require(isDark ? "../../assets/logo-negative.svg" : "../../assets/logo.svg")} alt="Logo" className="w-32" />
   )
 }

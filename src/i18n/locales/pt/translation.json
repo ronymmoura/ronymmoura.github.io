@@ -1,3 +1,7 @@
 {
-  "title": "Coé!"
+  "greetings": "Olá!",
+  "namePrefix": "Eu sou o",
+  "name": "Rony Moura",
+  "rolePrefix": "Eu sou um ",
+  "role": "Engenheiro de Software"
 }

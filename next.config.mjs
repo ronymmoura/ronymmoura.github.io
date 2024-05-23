@@ -4,7 +4,7 @@ import createMDX from '@next/mdx'
 const nextConfig = {
   output: "export",
   images: {
-    domains: ["source.unsplash.com"],
+    domains: ["source.unsplash.com", "githubusercontent.com"],
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 };
