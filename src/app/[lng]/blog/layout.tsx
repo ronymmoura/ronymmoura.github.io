@@ -1,9 +1,13 @@
+import { useTranslation } from "@/app/i18n";
 import { ReactNode } from "react";
 
-export default function BlogLayout({ children }: { children: ReactNode }) {
+export default async function BlogLayout({ children, params: {
+  lng
+} }: { children: ReactNode; params:any }) {
+  const {t} = await useTranslation(lng, "blog");
   return (
     <div>
-      AB
+      {t("title")}
       {children}
     </div>
   )
