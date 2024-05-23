@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Theme from "./theme-toggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +19,8 @@ export default function RootLayout({
   params: any
 }>) {
   return (
-    <>{children}</>
+    <>
+      {children}
+    </>
   );
 }
