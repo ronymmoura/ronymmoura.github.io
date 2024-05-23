@@ -12,7 +12,7 @@ const config: Config = {
     
     extend: {
       colors: {
-        accent: colors.rose[600]
+        accent: colors.rose[500]
       },
     },
   },
