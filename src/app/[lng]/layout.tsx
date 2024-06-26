@@ -60,8 +60,10 @@ export default function RootLayout({
               {children}
             </main>
 
-            <footer className="flex p-10 justify-end">
-              Made with 💕 and code at <a href="https://github.com/ronymmoura/ronymmoura.github.io" className="text-black ml-2" target="_blank"><Image src={githubLogo} width={20} alt="GitHub" /></a>
+            <footer className="relative flex p-10 justify-end items-center space-x-3">
+              <div>Made with 💕</div>
+              <div className="text-3xl">⸱</div>
+              <div className="flex items-center">Code at <a href="https://github.com/ronymmoura/ronymmoura.github.io" className="text-black ml-2" target="_blank"><Image src={githubLogo} width={20} alt="GitHub" /></a></div>
             </footer>
           </div>
         </Theme>
